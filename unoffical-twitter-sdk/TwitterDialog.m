@@ -270,8 +270,8 @@ static CGFloat kBorderWidth = 10;
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         self.contentMode = UIViewContentModeRedraw;
         
-        UIImage* iconImage = [UIImage imageNamed:@"FBDialog.bundle/images/ticon.png"];
-        UIImage* closeImage = [UIImage imageNamed:@"FBDialog.bundle/images/tclose.png"];
+        UIImage* iconImage = [UIImage imageNamed:@"ticon.png"];
+        UIImage* closeImage = [UIImage imageNamed:@"tclose.png"];
         
         _iconView = [[UIImageView alloc] initWithImage:iconImage];
         [self addSubview:_iconView];
@@ -363,7 +363,7 @@ static CGFloat kBorderWidth = 10;
     NSString* host = [url host];
     NSLog(@"%@", host);
     NSLog(@"%@", [url absoluteString]);
-    if ([host isEqualToString:@"yatterbox.co.uk"]) {
+    if ([host isEqualToString:@"google.co.uk"]) {
         NSLog(@"At Yatterbox");
         if ([[url.resourceSpecifier substringToIndex:8] isEqualToString:@"//cancel"]) {
         
@@ -501,7 +501,7 @@ static CGFloat kBorderWidth = 10;
 }
 
 - (void)getAccessToken{
-    [self.twitterOAuth synchronousRequestTwitterTokenWithCallbackUrl:@"http://yatterbox.co.uk"];
+    [self.twitterOAuth synchronousRequestTwitterTokenWithCallbackUrl:@"http://google.co.uk"];
 }
 
 - (void)show {
